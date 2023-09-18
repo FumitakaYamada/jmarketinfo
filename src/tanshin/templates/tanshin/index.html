@@ -1,4 +1,14 @@
-﻿{% if latest_question_list %}
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap5 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+</head>
+<body>
+
+{% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
         <li>{{ question }}</li>
@@ -7,3 +17,11 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+
+  {% block content %}
+  {% endblock %}
+</div>
+</body>
+</html>
+
+

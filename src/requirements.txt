@@ -1,1 +1,2 @@
 ﻿django
+django-bootstrap-v5
